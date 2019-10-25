@@ -19,10 +19,11 @@ module.exports =
             return response.status(400).json({error: 'Dev not exist'})
         }
 
-        console.log(targetDev.likes.includes(targetDev["_id"]))
+        console.log(loggedDev.likes.includes(targetDev["_id"]))
 
         if (targetDev.likes.includes(loggedDev["_id"])) 
         {
+            console.log(user, devId, 'linha 26 back')
             const loggedSocket = request.connectedUser[user];
             const targetSocket = request.connectedUser[devId];
 
