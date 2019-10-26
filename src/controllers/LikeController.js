@@ -24,8 +24,8 @@ module.exports =
         if (targetDev.likes.includes(loggedDev["_id"])) 
         {
             console.log(user, devId, 'linha 26 back')
-            const loggedSocket = request.connectedUser[user];
-            const targetSocket = request.connectedUser[devId];
+            const loggedSocket = request.connectedUsers[user];
+            const targetSocket = request.connectedUsers[devId];
 
             if (loggedSocket)
             {
