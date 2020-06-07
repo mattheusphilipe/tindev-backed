@@ -38,7 +38,7 @@ mongoose.connect('mongodb+srv://mattheus:1989@clusterdomatheus-qrr1j.azure.mongo
     return next();
  });
  httpServer.use(cors());
- httpServer.use(express.json());
+ httpServer.use(express.urlencoded({extended: true}));
  httpServer.use(routes);
  //httpServer.listen(3333);
- server.listen(3333);
+ server.listen(process.env.PORT || 3333);

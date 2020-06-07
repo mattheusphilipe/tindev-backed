@@ -9,7 +9,6 @@ module.exports =
 
         const loggedDev = await Dev.findById(user);
 
-
         const users = await Dev.find(
             {
                 $and: 
